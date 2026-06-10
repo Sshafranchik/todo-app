@@ -1,18 +1,15 @@
 let tasks = [];
 
-// Завантаження з localStorage
 function loadTasks() {
     const saved = localStorage.getItem("tasks");
     tasks = saved ? JSON.parse(saved) : [];
     renderTasks();
 }
 
-// Збереження в localStorage
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// Додавання завдання
 function addTask() {
     const input = document.getElementById("taskInput");
     const text = input.value.trim();
@@ -24,21 +21,18 @@ function addTask() {
     renderTasks();
 }
 
-// Перемикання виконання
 function toggleTask(index) {
     tasks[index].completed = !tasks[index].completed;
     saveTasks();
     renderTasks();
 }
 
-// Видалення
 function deleteTask(index) {
     tasks.splice(index, 1);
     saveTasks();
     renderTasks();
 }
 
-// Відображення
 function renderTasks() {
     const list = document.getElementById("taskList");
     list.innerHTML = "";
