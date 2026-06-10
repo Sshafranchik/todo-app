@@ -1,6 +1,3 @@
-/* ------------------------------
-   БАЗОВІ НАЛАШТУВАННЯ
------------------------------- */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -11,7 +8,6 @@ body {
     color: #e8f5e9;
 }
 
-/* Анімація руху градієнта */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -35,9 +31,6 @@ h2 {
     color: #b2ffb2;
 }
 
-/* ------------------------------
-   INPUT + BUTTON
------------------------------- */
 
 input {
     width: 70%;
@@ -69,9 +62,6 @@ input:focus {
     background: #66bb6a;
 }
 
-/* ------------------------------
-   СПИСОК ЗАВДАНЬ
------------------------------- */
 
 ul {
     padding: 0;
@@ -93,7 +83,6 @@ li {
     animation: fadeIn 0.4s forwards;
 }
 
-/* Анімація появи */
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -101,7 +90,6 @@ li {
     }
 }
 
-/* Анімація зникнення */
 .fade-out {
     animation: fadeOut 0.4s forwards;
 }
@@ -113,9 +101,6 @@ li {
     }
 }
 
-/* ------------------------------
-   ВИКОНАНІ ЗАВДАННЯ
------------------------------- */
 
 li.completed {
     background: rgba(120, 200, 120, 0.25);
@@ -125,9 +110,6 @@ li.completed {
     transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* ------------------------------
-   КАСТОМНІ ІКОНКИ
------------------------------- */
 
 button {
     margin-left: 10px;
@@ -145,7 +127,6 @@ button:hover {
     background: rgba(255,255,255,0.25);
 }
 
-/* Іконки */
 button.complete-btn::before {
     content: "✔";
 }
@@ -154,9 +135,6 @@ button.delete-btn::before {
     content: "🗑";
 }
 
-/* ------------------------------
-   ЗАКРУГЛЕНІ ЧЕКБОКСИ (якщо додаси)
------------------------------- */
 
 .checkbox {
     width: 20px;
