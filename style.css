@@ -1,0 +1,176 @@
+/* ------------------------------
+   БАЗОВІ НАЛАШТУВАННЯ
+------------------------------ */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f2e1f, #2f4f2f, #3a5f3a);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    padding: 20px;
+    color: #e8f5e9;
+}
+
+/* Анімація руху градієнта */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#app {
+    max-width: 450px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #b2ffb2;
+}
+
+/* ------------------------------
+   INPUT + BUTTON
+------------------------------ */
+
+input {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #4f7f4f;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    color: #e8f5e9;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #7fff7f;
+}
+
+#addBtn {
+    padding: 12px 16px;
+    background: #4caf50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    background: #66bb6a;
+}
+
+/* ------------------------------
+   СПИСОК ЗАВДАНЬ
+------------------------------ */
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    margin-bottom: 12px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    transition: 0.4s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.4s forwards;
+}
+
+/* Анімація появи */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анімація зникнення */
+.fade-out {
+    animation: fadeOut 0.4s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* ------------------------------
+   ВИКОНАНІ ЗАВДАННЯ
+------------------------------ */
+
+li.completed {
+    background: rgba(120, 200, 120, 0.25);
+    border-left: 4px solid #7fff7f;
+    text-decoration: line-through;
+    color: #c8f7c5;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ------------------------------
+   КАСТОМНІ ІКОНКИ
+------------------------------ */
+
+button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.15);
+    color: #e8f5e9;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+/* Іконки */
+button.complete-btn::before {
+    content: "✔";
+}
+
+button.delete-btn::before {
+    content: "🗑";
+}
+
+/* ------------------------------
+   ЗАКРУГЛЕНІ ЧЕКБОКСИ (якщо додаси)
+------------------------------ */
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #7fff7f;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkbox.checked {
+    background: #7fff7f;
+    box-shadow: 0 0 10px #7fff7f;
+}
+
